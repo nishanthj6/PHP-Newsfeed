@@ -39,7 +39,7 @@ div#Container {
     overflow:hidden;
     border: 1px SOLID #188377;
     background-color: rgba(0, 0, 0, 0.76);
-    box-shadow: 1px 50px 65px #08478d;
+    box-shadow: 1px 1px 65px #08478d;
 }
 
 h1#Header {
