@@ -87,6 +87,32 @@ ol#Navigation a:hover { color: #16e9d9; transition: all 0.25s ease; text-shadow:
 /* CONTENT */
 /**********/
 
+.panel {
+    width: 90%;
+    padding: 12px;
+    margin: 0 auto;
+    background: linear-gradient(-90deg, #021621, #062641);
+    background: -webkit-linear-gradient(-90deg, #021621, #062641); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #021621, #062641); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #021621, #062641);
+
+    border: 1px SOLID #184eba;
+    box-shadow: 1px 1px 11px #0e6c6c;
+}
+
+.panel h3 {
+    background: linear-gradient(-90deg, #063856, #02182c);
+    padding: 9px;
+    border: 1px SOLID #184eba;
+    margin-bottom: 5px;
+}
+
+.content {
+    border: 1px SOLID #0965a8;
+    padding: 23px;
+    min-height: 90px;
+}
+
 /* FOOTER */
 /**********/
 

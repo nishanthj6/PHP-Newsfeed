@@ -1,5 +1,10 @@
 <?php include ('overall_header.php'); ?>
 
-<h1>Hello</h1>
+<div class="panel">
+    <h3>title</h3>
+    <div class="content">
+        loremipsum dorememememee
+    </div>
+</div>
 
 <?php include ('overall_footer.php'); ?>
