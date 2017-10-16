@@ -38,7 +38,7 @@ div#Container {
 	text-align: left;
     overflow:hidden;
     border: 1px SOLID #188377;
-    background-color: #030d1acc;
+    background-color: rgba(0, 0, 0, 0.76);
     box-shadow: 1px 50px 65px #08478d;
 }
 
@@ -65,7 +65,7 @@ ol#Navigation {
     border-top: 1px SOLID #105fa4;
     border-bottom: 1px SOLID #1662a5;
     text-align: center;
-    
+
     padding-left: 0;
     background: linear-gradient(-90deg, #033551, #092033);
     background: red; /* For browsers that do not support gradients */
