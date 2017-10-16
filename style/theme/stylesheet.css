@@ -1,0 +1,98 @@
+/* PHP-NewsFeed Layout
+*
+* Theme:  Default
+* Author: PatricNox
+* URL: github.com/PatricNox
+*
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: #000;
+    background:url('../template/images/background.jpg');
+	background-position: unset;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+/* GENERAL */
+/**********/
+
+a, a:hover, ul, li, p {
+    text-decoration: none;
+    color: #1ec2b6;
+    transition: 0.25s all ease;
+}
+
+/* HEADER */
+/**********/
+
+div#Container {
+	width: 65%;
+    margin: 0 auto;
+    margin-top: 5px;
+	padding: 0 7px;
+	text-align: left;
+    overflow:hidden;
+    border: 1px SOLID #188377;
+    background-color: #030d1acc;
+    box-shadow: 1px 50px 65px #08478d;
+}
+
+h1#Header {
+	background: url('../template/images/header.png') no-repeat;
+	display:block;
+    height:221px;
+    
+    border: 2px solid transparent;
+    border-image-source: none;
+    border-image-slice: 100%;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch stretch;
+    -moz-border-image: -moz-linear-gradient(top left, rgb(240, 192, 0) 0%, transparent 50%, rgb(240, 192, 0) 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, rgb(240, 192, 0) 0%, transparent 50%, rgb(240, 192, 0) 100%);
+    border-image: linear-gradient(to bottom right, rgb(240, 192, 0) 0%, transparent 50%, rgb(240, 192, 0) 100%);
+        border-image-slice: 100%;
+    border-image-slice: 1;
+    box-shadow: 1px 1PX 24PX #d7b319;
+}
+
+ol#Navigation {
+    border-top: 1px SOLID #105fa4;
+    border-bottom: 1px SOLID #1662a5;
+    text-align: center;
+    
+    padding-left: 0;
+    background: linear-gradient(-90deg, #033551, #092033);
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #033551, #092033); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #033551, #092033); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #033551, #092033); /* For Firefox 3.6 to 15 */
+}
+
+ol#Navigation li {
+	display:inline;
+	line-height:51px;
+	border-right: 0.25px SOLID #105395e6;
+	padding: 0 27px 0 25px;
+}
+
+ol#Navigation li#NoBg {background:none;}
+ol#Navigation a:hover { color: #16e9d9; transition: all 0.25s ease; text-shadow: 1px 1px 5px #10a2d2;}
+
+/* CONTENT */
+/**********/
+
+/* FOOTER */
+/**********/
+
+Footer {
+	height:31px;
+	background:url('../template/images/footer.jpg') repeat-x;
+	font-size: 8pt;
+	padding: 5px 20px 0 20px;
+}
