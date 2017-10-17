@@ -121,6 +121,13 @@ ol#Navigation a:hover { color: #16e9d9; transition: all 0.25s ease; text-shadow:
     float: right;
 }
 
+#thumbs img { transition: all 0.25s ease;}
+.content #thumbs img:hover
+{
+    transform: scale(1.3);
+    transition: all 0.25s ease;
+}
+
 /* FOOTER */
 /**********/
 
