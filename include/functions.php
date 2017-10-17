@@ -22,23 +22,24 @@ function AssignToTemplate (String $fileName, String $title): string
 
 function ConnectDB(bool $stat)
 {
-    global $DB_HOST, $DB_NAME, $DB_PASS, $DB_USER;
+    require __DIR__."/configs/config.php";  
 
     if ($stat)
     {
+        
         $MySQL = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USER, $DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-
+        
         if (!$MySQL)
             printf("Connect failed: %s\n", mysqli_connect_error());
 
         else
-            return true;
+            return $MySQL;
     }
 
     else
     {
         $MySQL->close();
-        return false;
+        return $MySQL;
     }
 }
 
