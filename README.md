@@ -1,5 +1,6 @@
 # PHP-Newsfeed
 A simple database-managed newsfeed in PHP
+https://i.imgur.com/JfdL5uj.jpg
 
 ## ToDo
 What to do, what to do?
