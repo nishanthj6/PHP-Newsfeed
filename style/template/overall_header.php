@@ -9,12 +9,12 @@
 </head>
 <body>
 <div id="Container">
-		<h1 id="Header"></h1>
-		<ol id="Navigation">
-			<li><a href="#" id="on">Home</a></li>
-			<li><a href="#">Information</a></li>
-			<li><a href="#">Chat</a></li>
-			<li><a href="#">Contact Us</a></li>
-			<li><a href="#">Facebook</a></li>
-		</ol>
+        <h1 id="Header"></h1>
+        <ol id="Navigation">
+            <li><a href="#" id="on">Home</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ol>
 
