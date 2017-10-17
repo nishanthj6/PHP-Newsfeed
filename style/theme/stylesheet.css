@@ -9,6 +9,7 @@
 body {
     margin: 0;
     padding: 0;
+    padding-bottom: 12px;
     color: #ffffff;
     background-color: #000;
     background:url('../template/images/background.jpg');
@@ -21,7 +22,7 @@ body {
 /* GENERAL */
 /**********/
 
-a, a:hover, ul, li, p {
+a, a:hover, ul, li {
     text-decoration: none;
     color: #1ec2b6;
     transition: 0.25s all ease;
@@ -110,14 +111,22 @@ ol#Navigation a:hover { color: #16e9d9; transition: all 0.25s ease; text-shadow:
 .content {
     border: 1px SOLID #0965a8;
     padding: 23px;
-    min-height: 90px;
+    height: auto;
+    overflow: hidden;
+}
+
+.content span.author 
+{
+    font-size: 0.75em;
+    float: right;
 }
 
 /* FOOTER */
 /**********/
 
 Footer {
-	height:31px;
+    height:31px;
+    margin-top: 12px;
 	background:url('../template/images/footer.jpg') repeat-x;
 	font-size: 8pt;
 	padding: 5px 20px 0 20px;
