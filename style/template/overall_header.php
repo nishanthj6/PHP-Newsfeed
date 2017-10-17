@@ -17,4 +17,4 @@
 			<li><a href="#">Contact Us</a></li>
 			<li><a href="#">Facebook</a></li>
 		</ol>
-		<div class="Clear"></div>
+
