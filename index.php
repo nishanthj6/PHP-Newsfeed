@@ -5,9 +5,24 @@
     require __DIR__."/configs/config.php";      // General Configurements
     require __DIR__."/include/functions.php";
 
+    // Initlize user session
+    session_start();
+
+    /* Page specific PHP */
+    /*********************/
+    $test = "hello";
     // Assign Layout - Set Layout and Page Title
     AssignToTemplate ('index', 'NewsFeed');
 
-    // Page specific PHP
+    // Fetch posts from Database
+    $Query = $MySQL->prepare('SELECT * FROM posts ORDER BY ID DESC');
+    $Query->execute();
+    $_SESSION['Results'] = $Query->fetchAll();
 
-?>
+    // Print out is in the template file, see style/template/index.php for example.
+    //
+    // Foreach ($results as $r):
+    //   <HTML CODE HERE>
+    // EndForeach;
+    // 
+    // r['username']  -> would be username column in database, at the ID row

@@ -1,10 +1,18 @@
 <?php include ('overall_header.php'); ?>
 
 <div class="panel">
-    <h3>title</h3>
+
+<?php foreach($_SESSION['Results'] as $r): ?>
+    <h3><?=$r['title'];?></h3>
     <div class="content">
-        loremipsum dorememememee
+        <p><?=$r['text'];?></p>
+        <span class="author">
+            <br />Posted by <?=$r['author']. " at ". date($r['date']);?><br />
+            <i>Likes: <?=$r['likes'];?></i><br>
+            <?= LikeSystem(); ?>
+        </span>
     </div>
+<?php  endforeach; ?>
 </div>
 
 <?php include ('overall_footer.php'); ?>
