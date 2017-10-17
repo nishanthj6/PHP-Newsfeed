@@ -1,8 +1,8 @@
 <?php include ('overall_header.php'); ?>
 
 <div class="panel">
-
 <?php foreach($_SESSION['Results'] as $r): ?>
+
     <h3><?=$r['title'];?></h3>
     <div class="content">
         <p><?=$r['text'];?></p>
@@ -12,6 +12,7 @@
             <?= LikeSystem(); ?>
         </span>
     </div>
+
 <?php  endforeach; ?>
 </div>
 

@@ -10,11 +10,12 @@
 
     /* Page specific PHP */
     /*********************/
-    $test = "hello";
+
     // Assign Layout - Set Layout and Page Title
-    AssignToTemplate ('index', 'NewsFeed');
+    AssignToTemplate ('index_body', 'NewsFeed');
 
     // Fetch posts from Database
+    $MySQL = ConnectDB(true);
     $Query = $MySQL->prepare('SELECT * FROM posts ORDER BY ID DESC');
     $Query->execute();
     $_SESSION['Results'] = $Query->fetchAll();
