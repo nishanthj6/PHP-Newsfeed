@@ -55,7 +55,7 @@ To install the newsfeed you can either use Git or download the repository in a w
 _ZipFile_
 Simply click "Clone or Download" at top right and choose "Download Zip".
 
- ![Zip](https://imgur.com/SpglHvl)
+ ![Zip](https://i.imgur.com/fzlq8ri.png)
  > **Note:** It's recommended to use WinRaR for the zip, but any zipreader works.
 
 Once downloaded, extract the content in your htdocs folder.
@@ -67,7 +67,7 @@ Simply enter the database credentials there. If nothing happends, your credentia
 _GIT_
 Navigate to your webserver htdocs directory, XAMPP/htdocs/ for windows or /var/www/ for Mac users, using the command prompt. Once there, clone the repository using git clone.
 
-![Git](https://imgur.com/SpglHvl)
+![Git](https://i.imgur.com/SpglHvl.png)
  > **Note:** In the example above I created a folder "myfolder", this is NOT mandatory.
 
 Navigating to your newsfeed using localhost in your browser will now get you to an install page.
