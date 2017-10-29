@@ -13,7 +13,8 @@
 	
 	$fields           = true;
 	$created_database = false;
-	
+	$error;
+
 	if (!isset($_POST['user']))
 		$fields = false;
 	if (!isset($_POST['host']))
@@ -61,17 +62,16 @@
 			}
 			else die ('could not find install folder.');
 		}
-	}
+	} else {$error = "You have to enter your Database connection credentials.";}
 	
 ?>
 <body>
 	<div id="install_box">
-		<form action="index.php" method="POST">
-			<input type="text" name="host">
-			<input type="text" name="database">
-			<input type="text" name="user">
-			<input type="text" name="password">
-			<input type="submit" value="Install">
+		<form action="index.php" method="POST" class="holder">
+			<p>Hostname:</p><input type="text" name="host">
+			<p>User:</p><input type="text" name="user">
+			<p>Password:</p><input type="text" name="password">
+			<input type="submit" value="Install Database"><br><br><?=$error?>
 		</form>
 	</div>
 </body>

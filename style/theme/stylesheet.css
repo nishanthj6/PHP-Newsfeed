@@ -88,6 +88,43 @@ ol#Navigation a:hover { color: #16e9d9; transition: all 0.25s ease; text-shadow:
 /* CONTENT */
 /**********/
 
+#install_box {
+    margin:0 auto;
+    margin-top: 25px;
+    width: 60%;
+    border: 1px SOLID #105fa4;
+    background: #051020;
+    padding: 25px;
+} #install_box p {text-align: center;}
+
+#install_box holder {display:inline-block;}
+#install_box input[type='text'] {
+    margin: 0 auto;
+    margin-top:6px;
+    display:block;
+    width:240px;
+    background: none;
+    background-color: rgba(8, 53, 104, 0.678);
+    border:1px SOLID #0e6c6c;
+    color:#fff;
+    transition: 0.5s all ease;
+}
+#install_box input[type='submit'] {
+    background: #000;
+    border: 1px SOLID #1176b6;
+    color: #fff;
+    transition: 0.5s all ease;
+}
+
+#install_box input[type="text"]:hover,#install_box input[type="text"]:focus {
+    border-color:#0095ff; transition: 0.5s all ease;
+}
+
+#install_box input[type="submit"]:hover,#install_box input[type="submit"]:focus {
+    border-color:#0095ff; transition: 0.5s all ease;
+    cursor:pointer;
+}
+
 .panel {
     width: 90%;
     padding: 12px;
