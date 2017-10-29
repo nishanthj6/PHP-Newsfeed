@@ -6,8 +6,7 @@
     require __DIR__."/include/functions.php";
 
     // Initlize user session
-    session_destroy(); // Clear
-    session_start();   // Init New
+    session_start();
 
     /* Page specific PHP */
     /*********************/
