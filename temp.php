@@ -1,7 +1,7 @@
 <?php
     // General Configurement
     declare(strict_types=1);
-    define('FEED_ROOT', __DIR__ .'\\');
+    define('FEED_ROOT', __DIR__ .'/');
     require __DIR__."/configs/config.php";      // General Configurements
     require __DIR__."/include/functions.php";
 
