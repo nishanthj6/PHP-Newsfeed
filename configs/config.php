@@ -13,9 +13,3 @@
 	// Website Name
 	$WebName   = 'NewsFeed';
 	$Feed = $PageTitle = NULL;   // This is set by your PHP file in root!
-
-	// Database Configs
-	$DB_HOST   = 'localhost';
-	$DB_NAME   = 'newsfeed_database';
-	$DB_USER   = 'root';
-	$DB_PASS   = 'root';

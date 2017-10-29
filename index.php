@@ -21,8 +21,6 @@
 		$fields = false;
 	if (!isset($_POST['password']))
 		$fields = false;
-	if (!isset($_POST['database']))
-		$fields = false;
 
 	function delTree($dir) {
 		$files = array_diff(scandir($dir), array('.','..'));
@@ -35,7 +33,6 @@
 	if ($fields)
 	{
 		$DB_HOST   = $_POST['host'];
-		$DB_NAME   = $_POST['database'];
 		$DB_USER   = $_POST['user'];
 		$DB_PASS   = $_POST['password'];
 		try 
@@ -52,6 +49,25 @@
 		}
 
 		if ($created_database) {
+			if (is_dir('configs'))
+			{
+
+					$file = fopen('configs/config.php', 'a');
+					echo "<h1>yes<";
+					$DB_CONFIG =
+					'
+					// Database Configs
+					$DB_HOST   = \''.$DB_HOST.'\';
+					$DB_NAME   = \'newsfeed_database\';
+					$DB_USER   = \''.$DB_USER.'\';
+					$DB_PASS   = \''.$DB_PASS.'\';
+				
+					';
+					fputs($file, $DB_CONFIG);
+					fclose($file);
+				
+			} else  die('Config file not found.');
+
 			if (is_dir('install'))
 			{
 				delTree('install');
