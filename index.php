@@ -45,7 +45,6 @@
 			{
 
 					$file = fopen('configs/config.php', 'a');
-					echo "<h1>yes<";
 					$DB_CONFIG =
 					'
 					// Database Configs
