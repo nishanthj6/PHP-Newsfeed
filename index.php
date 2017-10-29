@@ -14,6 +14,7 @@
 	$fields           = true;
 	$created_database = false;
 	$error;
+	session_start();
 
 	if (!isset($_POST['user']))
 		$fields = false;
@@ -78,7 +79,6 @@
 				// HackFix session bug
 				$Query = $MySQL->prepare('SELECT * FROM posts ORDER BY ID DESC');
 				$Query->execute();
-				session_start();
 				$_SESSION['Results'] = $Query->fetchAll();
 				// - End Hackfix
 
