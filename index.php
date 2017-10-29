@@ -78,9 +78,10 @@
 				// HackFix session bug
 				$Query = $MySQL->prepare('SELECT * FROM posts ORDER BY ID DESC');
 				$Query->execute();
+				session_start();
 				$_SESSION['Results'] = $Query->fetchAll();
 				// - End Hackfix
-				
+
 				header ('Location: index.php');
 			}
 			else die ('could not find install folder.');
