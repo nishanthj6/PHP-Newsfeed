@@ -4,7 +4,7 @@ https://i.imgur.com/JfdL5uj.jpg
 
 ## Introduction
 This is a simple newsfeed made in PHP.
-The code uses a template filesystem image, where it actually do not have its engine yet 
+The code uses a template filesystem image, where it actually do not have its engine yet
 following the standards of an usual template system.
 
 Below you will find instructions on how to get this installed on your system.
@@ -15,9 +15,9 @@ Please do be sure to have the requirements fullfiled!
 In order to use this newsfeed, you will need to follow the criterias listed below.
 You will find details and instructions on how to achieve each requirement below the list.
 
-- Installed WebServer 
-- PHP Version => 7.0 
-- Local Database 
+- Installed WebServer
+- PHP Version => 7.0
+- Local Database
 
 
 **WebServer**
@@ -51,7 +51,7 @@ http://localhost:8888/phpmyadmin
 
 
 
-## Installation 
+## Installation
 To install the newsfeed you can either use Git or download the repository in a winrar file.
 
 **ZipFile**
@@ -77,13 +77,20 @@ Navigate to your webserver htdocs directory, XAMPP/htdocs/ for windows or /var/w
 Navigating to your newsfeed using localhost in your browser will now get you to an install page.
 Simply enter the database credentials there. If nothing happends, your credentials might be wrong.
 
-## The Developers Words
-Both the code and design could indeed be optimized, at many places. 
+## The Developers Last Words
+Both the code and design could indeed be optimized, at many places.
 Due to lack of time however, this was skipped for now. Hopefully one day I manage to create a full template system aswell and not only an image of it like here.
 
 **Verified Testers:**
+_(Successfully working, 0 Errors)_
+
 _AddeNordh_
+![Link: GitHub](https://github.com/addenordh)
+
+_Spectrez_
+![Link: GitHub](https://github.com/spectrez)
+![Link: WorkPlace 2017](https://truewow.org/forum/memberlist.php?mode=viewprofile&u=47699)
 
 
-
+## Thank You!
 > I've got to play in front of people. If I'm not moved, how can they be moved. [Buddy Holly] (https://www.youtube.com/watch?v=Mv_KLDCf4Qk)
