@@ -10,7 +10,7 @@ try {
 }
 
 catch (Exception $e) {
-    echo '<b>Could not connect to Database:</b>\n\n ',  $e->getMessage(), "\n";
+    echo '<b>Could not connect to Database:</b><br> ',  $e->getMessage(), '<br>';
 }
 
 /* END - DATABASE CONNECTION */
@@ -53,16 +53,14 @@ function Like(String $type)
     if ($type === 'positive')
     {
         $Path = makePath('style', 'template', 'images', 'include', 'thumb_up1600.png');
-        $image = $Path;
-        echo "<img src='$image' />";
+        echo "<img src='$Path' />";
         return;
     }
 
     if ($type === 'negative')
     {
         $Path = makePath('style', 'template', 'images', 'include', 'thumb_down1600.png');
-        $image = $Path;
-        echo "<img src='$image' />";
+        echo "<img src='$Path' />";
         return;
     }
 
