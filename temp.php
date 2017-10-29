@@ -26,6 +26,14 @@
         $Query = $MySQL->prepare('UPDATE posts SET likes = likes +1 WHERE id = :postid');
         $Query->bindParam('postid', $i, PDO::PARAM_INT);
         $Query->execute();
+	}
+
+	if (isset($_GET['dislike']))
+    {
+        $i = intval($_GET['dislike']);
+        $Query = $MySQL->prepare('UPDATE posts SET likes = likes -1 WHERE id = :postid');
+        $Query->bindParam('postid', $i, PDO::PARAM_INT);
+        $Query->execute();
     }
 
     // Print out is in the template file, see style/template/index.php for example.
@@ -33,5 +41,5 @@
     // Foreach ($results as $r):
     //   <HTML CODE HERE>
     // EndForeach;
-    // 
+    //
     // r['username']  -> would be username column in database, at the ID row
