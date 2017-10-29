@@ -20,7 +20,7 @@ You will find details and instructions on how to achieve each requirement below 
 - Local Database 
 
 
-_WebServer_
+**WebServer**
 Remember to Always download the latest revision!
 
 Recommendations:
@@ -37,7 +37,7 @@ However, if you use another webserver or a local installation of PHP you may get
 
 http://php.net/downloads.php
 
-_Local Database_
+**Local Database**
 By using any of the webservers above, you will by default get a local webserver installed.
 If your webserver is a fresh install, you can verify this by visiting your PHPMyAdmin.
 
@@ -52,7 +52,7 @@ http://localhost:8888/phpmyadmin
 ## Installation 
 To install the newsfeed you can either use Git or download the repository in a winrar file.
 
-_ZipFile_
+**ZipFile**
 Simply click "Clone or Download" at top right and choose "Download Zip".
 
  ![Zip](https://i.imgur.com/fzlq8ri.png)
@@ -64,7 +64,7 @@ C:\XAMPP\HTDOCS (Windows) or /var/www (Linux)
 Navigating to your newsfeed using localhost in your browser will now get you to an install page.
 Simply enter the database credentials there. If nothing happends, your credentials might be wrong.
 
-_GIT_
+**GIT**
 Navigate to your webserver htdocs directory, XAMPP/htdocs/ for windows or /var/www/ for Mac users, using the command prompt. Once there, clone the repository using git clone.
 
 ![Git](https://i.imgur.com/SpglHvl.png)
