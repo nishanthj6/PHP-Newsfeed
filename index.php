@@ -74,6 +74,13 @@
 				rename ("index.php", "temp2.php");
 				rename ("temp.php", "index.php");
 				unlink ("temp2.php");
+
+				// HackFix session bug
+				$Query = $MySQL->prepare('SELECT * FROM posts ORDER BY ID DESC');
+				$Query->execute();
+				$_SESSION['Results'] = $Query->fetchAll();
+				// - End Hackfix
+				
 				header ('Location: index.php');
 			}
 			else die ('could not find install folder.');
