@@ -15,11 +15,9 @@
     AssignToTemplate ('index_body', 'NewsFeed');
 
     // Fetch posts from Database
-    $MySQL = ConnectDB(true);
     $Query = $MySQL->prepare('SELECT * FROM posts ORDER BY ID DESC');
     $Query->execute();
     $_SESSION['Results'] = $Query->fetchAll();
-    $MySQL = ConnectDB(false);
 
     // Print out is in the template file, see style/template/index.php for example.
     //
