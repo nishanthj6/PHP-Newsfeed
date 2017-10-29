@@ -85,10 +85,13 @@ Due to lack of time however, this was skipped for now. Hopefully one day I manag
 _(Successfully working, 0 Errors)_
 
 _AddeNordh_
+
 ![Link: GitHub](https://github.com/addenordh)
 
 _Spectrez_
+
 ![Link: GitHub](https://github.com/spectrez)
+
 ![Link: WorkPlace 2017](https://truewow.org/forum/memberlist.php?mode=viewprofile&u=47699)
 
 
