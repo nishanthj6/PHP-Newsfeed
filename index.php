@@ -46,7 +46,7 @@
 		}
 
 		catch (Exception $e) {
-			echo '<b>Could not create database:</b>\n\n ',  $e->getMessage(), "\n";
+			$error[] = '<b>Could not create database:</b><br>'.  $e->getMessage(). '<br>';
 		}
 
 		if ($created_database) {
