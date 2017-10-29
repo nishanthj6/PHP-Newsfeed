@@ -77,6 +77,25 @@ Navigate to your webserver htdocs directory, XAMPP/htdocs/ for windows or /var/w
 Navigating to your newsfeed using localhost in your browser will now get you to an install page.
 Simply enter the database credentials there. If nothing happends, your credentials might be wrong.
 
+## Common Issues and resolutions
+**[1045] Access denied** 
+
+This error is presented if you enter invalid credentials for the install page.
+Be sure you do enter the correct ones. If your install is fresh, you may visit your webservers documentation to find its default settings for database login. 
+
+Example:
+
+Host:     127.0.0.1
+username: Root
+Password: databaselogin
+
+**[2002] php_network_getaddresses**
+
+If the hostname cannot be resolved, you will be seing this error at the install page.
+If you have the webserver stored locally, its recommended to write localhost or 127.0.0.1 as hostname.
+
+
+
 ## The Developers Last Words
 Both the code and design could indeed be optimized, at many places.
 Due to lack of time however, this was skipped for now. Hopefully one day I manage to create a full template system aswell and not only an image of it like here.
@@ -94,6 +113,9 @@ _Spectrez_
 
 ![Link: WorkPlace 2017](https://truewow.org/forum/memberlist.php?mode=viewprofile&u=47699)
 
+_majapersson_
+
+![Link: GitHub](https://github.com/majapersson)
 
 ## Thank You!
 > I've got to play in front of people. If I'm not moved, how can they be moved. [Buddy Holly] (https://www.youtube.com/watch?v=Mv_KLDCf4Qk)
