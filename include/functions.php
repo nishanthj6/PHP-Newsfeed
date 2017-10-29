@@ -26,18 +26,32 @@ function AssignToTemplate (String $fileName, String $title): string
         return $PageTitle;
 }
 
-/* Render Thumb images, print out
+
+/* Return thumb icons
 *
+* fileName, without extension
 *
 */
 
-function LikeSystem ()
+function Like(String $type)
 {
-    $VOTEUP     = 'style\\template\\images\\include\\thumb_up1600.png';
-    $VOTEDOWN   = 'style\\template\\images\\include\\thumb_down1600.png';
+    $type = strtolower($type);
+    if ($type === 'positive')
+    {
+        $image = 'style\\template\\images\\include\\thumb_up1600.png';
+        echo "<img src='$image' />";
+        return;
+    }
 
-    echo "<span id='thumbs'>";
-    echo "<a href='#'><img src=$VOTEUP /> </a>" . "<a href='#'><img src=$VOTEDOWN /> </a>";
-    echo "</span>";
-    return null;
+    if ($type === 'negative')
+    {
+        $image = 'style\\template\\images\\include\\thumb_down1600.png';
+        echo "<img src='$image' />";
+        return;
+    }
+
+    else
+        die('Invalid argument for Like function. \n\n
+             Allowed (1): Positive \n
+             Allowed (2): Negative');
 }

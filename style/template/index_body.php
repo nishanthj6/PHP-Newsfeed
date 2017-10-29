@@ -9,7 +9,18 @@
         <span class="author">
             <br />Posted by <?=$r['author']. " at ". date($r['date']);?><br />
             <i>Likes: <?=$r['likes'];?></i><br>
-            <?= LikeSystem(); ?>
+
+            <!-- Like System -->
+            <span id='thumbs'>
+                <a href='index.php?like=<?=$r['id']?>'>
+                    <?php Like('Positive');?>
+                </a>
+                <a href='index.php?dislike=<?=$r['id']?>'>
+                    <?php Like('negative');?>
+                </a>
+            </span>
+            <!-- END - Like System -->
+
         </span>
     </div>
 

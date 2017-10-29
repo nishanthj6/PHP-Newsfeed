@@ -22,11 +22,10 @@
     // Page Specific PHP
     if (isset($_GET['like']))
     {
-        $i = $_GET['like'];
+        $i = intval($_GET['like']);
         $Query = $MySQL->prepare('UPDATE posts SET likes = likes +1 WHERE id = :postid');
-        $Query->bindParam(':postid', $i, PDO::PARAM_INT);
+        $Query->bindParam('postid', $i, PDO::PARAM_INT);
         $Query->execute();
-        
     }
 
     // Print out is in the template file, see style/template/index.php for example.
