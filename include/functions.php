@@ -4,7 +4,8 @@
 /********************* */
 
 try {
-    require (FEED_ROOT . 'configs/config.php');
+    $path = makePath('configs','config.php');
+    require (FEED_ROOT . $path);
     $MySQL = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USER, $DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 }
 
@@ -29,7 +30,8 @@ catch (Exception $e) {
 function AssignToTemplate (String $fileName, String $title): string
 {
     $PageTitle = "$title";
-    $Assigned = require_once (FEED_ROOT . "style\\template\\$fileName.php");
+    $Path = makePath('style', 'template', $fileName);
+    $Assigned = require_once (FEED_ROOT . $Path.'.php');
     if ($Assigned && $PageTitle === $title)
         return $PageTitle;
 }
@@ -50,14 +52,16 @@ function Like(String $type)
     $type = strtolower($type);
     if ($type === 'positive')
     {
-        $image = 'style\\template\\images\\include\\thumb_up1600.png';
+        $Path = makePath('style', 'template', 'images', 'include', 'thumb_up1600.png');
+        $image = $Path;
         echo "<img src='$image' />";
         return;
     }
 
     if ($type === 'negative')
     {
-        $image = 'style\\template\\images\\include\\thumb_down1600.png';
+        $Path = makePath('style', 'template', 'images', 'include', 'thumb_down1600.png');
+        $image = $Path;
         echo "<img src='$image' />";
         return;
     }
@@ -66,4 +70,18 @@ function Like(String $type)
         die('Invalid argument for Like function. \n\n
              Allowed (1): Positive \n
              Allowed (2): Negative');
+}
+
+/**
+ *  Create Universal Directoring
+ *  returns path supported by both PC and MAC
+ *
+ * @param $parts      # Multi value argument
+ *
+ * @return implode()  # internal function
+ *
+ */
+
+function makePath(...$parts) {
+   return implode(DIRECTORY_SEPARATOR, $parts);
 }
