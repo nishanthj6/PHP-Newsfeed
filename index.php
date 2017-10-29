@@ -4,15 +4,24 @@
 
 	$fields           = true;
 	$created_database = false;
-	$error;
+	$error[] = '';
 	session_start();
 
-	if (!isset($_POST['user']))
+	if (empty($_POST['user']))
+	{
+		$error[] = "You need to specify the <font color='green'>username</font> for your database login.<br>";
 		$fields = false;
-	if (!isset($_POST['host']))
+	}
+	if (empty($_POST['host']))
+	{
+		$error[] = "You need to specify the <font color='purple'>hostname</font> for your database login.<br>";
+				$fields = false;
+	}
+	if (empty($_POST['password']))
+	{
+		$error[] = "You need to specify the <font color='red'>password</font> for your database login.<br>";
 		$fields = false;
-	if (!isset($_POST['password']))
-		$fields = false;
+	}
 
 	function delTree($dir) {
 		$files = array_diff(scandir($dir), array('.','..'));
@@ -24,9 +33,9 @@
 
 	if ($fields)
 	{
-		$DB_HOST   = $_POST['host'];
-		$DB_USER   = $_POST['user'];
-		$DB_PASS   = $_POST['password'];
+		$DB_HOST   = trim($_POST['host']);
+		$DB_USER   = trim($_POST['user']);
+		$DB_PASS   = trim($_POST['password']);
 		try
 		{
 			$MySQL = new PDO("mysql:host=$DB_HOST;", $DB_USER, $DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -76,7 +85,7 @@
 			}
 			else die ('could not find install folder.');
 		}
-	} else {$error = "You have to enter your Database connection credentials.";}
+	}
 
 ?>
 <!DOCTYPE html>
@@ -94,7 +103,13 @@
 			<p>Hostname:</p><input type="text" name="host">
 			<p>User:</p><input type="text" name="user">
 			<p>Password:</p><input type="text" name="password">
-			<input type="submit" value="Install Database"><br><br><?=$error?>
+			<input type="submit" name="enter" value="Install Database"><br><br>
+			<?php
+			if (isset($_POST['enter']))
+			{
+				foreach ($error as $r)
+				 echo $r;
+			}?>
 		</form>
 	</div>
 </body>
