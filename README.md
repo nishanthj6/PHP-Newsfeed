@@ -94,7 +94,20 @@ Password: databaselogin
 If the hostname cannot be resolved, you will be seing this error at the install page.
 If you have the webserver stored locally, its recommended to write localhost or 127.0.0.1 as hostname.
 
+**Uncaught Error: Undefined class constant**
 
+The database connection of this newsfeed uses PDO.
+If you get this error, you may need to enable the PDO extension in your php.ini file.
+
+_Linux_
+
+Navigate to php.ini and add
+>extension=php_pdo_mysql.so
+
+_Windows_
+
+Navigate to php.ini and add
+>extension=php_pdo_mysql.dll
 
 ## The Developers Last Words
 Both the code and design could indeed be optimized, at many places.
