@@ -17,11 +17,6 @@
 		$error[] = "You need to specify the <font color='purple'>hostname</font> for your database login.<br>";
 				$fields = false;
 	}
-	if (empty($_POST['password']))
-	{
-		$error[] = "You need to specify the <font color='red'>password</font> for your database login.<br>";
-		$fields = false;
-	}
 
 	function delTree($dir) {
 		$files = array_diff(scandir($dir), array('.','..'));
